@@ -79,6 +79,7 @@ const handleLogin = () => {
         ElMessage.success(data.info)
         window.sessionStorage.setItem("token", data.token)
         window.sessionStorage.setItem("currentUser", JSON.stringify(data.user))
+        window.sessionStorage.setItem("menuList", JSON.stringify(data.menuList))
         // 勾选了需要记住密码设置在cookie 中设置记住用户名和密码
         if (loginForm.value.rememberMe) {
           Cookies.set("username", loginForm.value.username, {expires: 30});
